@@ -21,42 +21,55 @@
     <main>
         <section class="hero">
             <h1>Kontaktieren Sie uns</h1>
-            <h2>Wir freuen uns darauf, von Ihnen zu hören</h2>
+            <h2>Wir beraten Sie gerne zu Ihren KI-Anforderungen</h2>
         </section>
 
-        <section class="contact-grid">
-            <div class="contact-item">
-                <h3>E-Mail</h3>
-                <p>Direkte Kontaktaufnahme per E-Mail:</p>
-                <a href="mailto:tristanwilms111@gmail.com" class="contact-link">tristanwilms111@gmail.com</a>
-            </div>
+        <section class="contact-section">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Kontaktdaten</h3>
+                    <p>Special Local Maschine UG</p>
+                    <p>Musterstraße 123</p>
+                    <p>12345 Berlin</p>
+                    <p>Deutschland</p>
+                    <p>Tel: +49 (0) 30 123456789</p>
+                    <p>E-Mail: info@special-local-maschine.de</p>
+                </div>
 
-            <div class="contact-item">
-                <h3>Standort</h3>
-                <p>Tristan Wilms<br>
-                Bouchestraße 78<br>
-                12435 Berlin<br>
-                Deutschland</p>
-            </div>
+                <div class="contact-form">
+                    <h3>Kontaktformular</h3>
+                    <form action="/submit-form" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
 
-            <div class="contact-item">
-                <h3>Geschäftszeiten</h3>
-                <p>Montag - Freitag<br>
-                9:00 - 18:00 Uhr</p>
-            </div>
-        </section>
+                        <div class="form-group">
+                            <label for="email">E-Mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
 
-        <section class="response-commitment">
-            <div class="commitment-content">
-                <h2>Schnelle Reaktionszeit</h2>
-                <p>Wir bemühen uns, alle Anfragen innerhalb von 24 Stunden zu beantworten.</p>
-            </div>
-        </section>
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
 
-        <section class="contact-cta">
-            <h2>Bereit für den nächsten Schritt?</h2>
-            <p>Lassen Sie uns gemeinsam Ihre KI-Lösung gestalten.</p>
-            <a href="mailto:tristanwilms111@gmail.com" class="cta-button">Jetzt Kontakt aufnehmen</a>
+                        <div class="form-group">
+                            <label for="message">Ihre Nachricht</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="privacy">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu
+                            </label>
+                        </div>
+
+                        <button type="submit" class="cta-button">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
