@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Kraftwerk - Special Local Maschine UG</title>
+    <style>
+        /* Reset und Basis-Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.5;
+            color: #1d1d1f;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                            url('/images/ai-powerhouse.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            font-weight: 400;
+            color: #86868b;
+        }
+
+        /* Chip Section */
+        .chip-section {
+            padding: 100px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .chip-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .chip-card {
+            padding: 40px;
+            background-color: #fbfbfd;
+            border-radius: 18px;
+        }
+
+        /* Neue Styles */
+        .features-section {
+            padding: 80px 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card i {
+            font-size: 48px;
+            color: #0066cc;
+            margin-bottom: 20px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
+            <li><a href="ansatz.html">Unser Ansatz</a></li>
+            <li><a href="technologien.html">Technologien</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Das KI-Kraftwerk</h1>
+            <h2>Ihr lokales KI-Rechenzentrum</h2>
+            <p>Bis zu 196 GB VRAM - 100% DSGVO-konform - Plug & Play</p>
+            <a href="#kontakt" class="cta-button">Jetzt beraten lassen</a>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <h2>Ihre Vorteile auf einen Blick</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Maximale Sicherheit</h3>
+                    <p>Komplett offline betreibbar, keine externen Datenübertragungen nötig</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Nachhaltig & Effizient</h3>
+                    <p>M1-3 Ultra-Chips statt klassischer GPU-Power für besseren ökologischen Fußabdruck</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-plug"></i>
+                    <h3>Sofort Einsatzbereit</h3>
+                    <p>Plug & Play mit vorinstallierter Automatisierungsplattform und Sprachmodellen</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="comparison-section">
+            <h2>Vergleich mit Cloud-Lösungen</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>KI-Kraftwerk</th>
+                    <th>Cloud-GPU</th>
+                </tr>
+                <tr>
+                    <td>Datenschutz</td>
+                    <td>100% lokal, keine externe Datenübertragung</td>
+                    <td>Abhängig von Cloud-Anbieter</td>
+                </tr>
+                <tr>
+                    <td>Betriebskosten</td>
+                    <td>Einmalige Investition, geringe laufende Kosten</td>
+                    <td>Kontinuierliche Nutzungsgebühren</td>
+                </tr>
+                <tr>
+                    <td>Internet-Abhängigkeit</td>
+                    <td>Kein Internet erforderlich</td>
+                    <td>Permanente Verbindung nötig</td>
+                </tr>
+                <tr>
+                    <td>Verfügbarkeit</td>
+                    <td>24/7 garantiert</td>
+                    <td>Abhängig von Server-Auslastung</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Specifications Section -->
+        <section class="specs-section">
+            <h2>Technische Spezifikationen</h2>
+            <div class="chip-grid">
+                <div class="chip-card">
+                    <h4>Hardware & Leistung</h4>
+                    <ul>
+                        <li>Bis zu 196 GB VRAM</li>
+                        <li>M1-3 Ultra-Chip Architektur</li>
+                        <li>Energieeffizientes Kühlsystem</li>
+                        <li>Optimierte Hardwareressourcen</li>
+                    </ul>
+                </div>
+                <div class="chip-card">
+                    <h4>Software & Sicherheit</h4>
+                    <ul>
+                        <li>Vorinstallierte KI-Modelle</li>
+                        <li>Automatisierungsplattform</li>
+                        <li>Modernste Verschlüsselungstechnologien</li>
+                        <li>Regelmäßige Sicherheitsupdates</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="support-section">
+            <h2>Umfassender Support</h2>
+            <div class="support-features">
+                <ul>
+                    <li>Persönliche Einweisung und Schulung</li>
+                    <li>Individuelle Implementierung vor Ort</li>
+                    <li>Technischer Support bei Fragen</li>
+                    <li>Regelmäßige Wartung und Updates</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontakt" class="contact-section">
+            <h2>Interesse geweckt?</h2>
+            <p>Vereinbaren Sie eine persönliche Beratung oder fordern Sie ein individuelles Angebot an.</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Firma">
+                <input type="email" placeholder="E-Mail">
+                <textarea placeholder="Ihre Nachricht"></textarea>
+                <button type="submit" class="cta-button">Anfrage senden</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Special Local Maschine UG. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html> 
