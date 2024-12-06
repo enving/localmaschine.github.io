@@ -4,52 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Local Maschine UG - Lokale KI-Lösungen</title>
+    <title>KI-Kraftwerk - Special Local Maschine UG</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
-            <li><a href="ansatz.html">Unser Ansatz</a></li>
-            <li><a href="technologien.html">Technologien</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="#home">Startseite</a></li>
+            <li><a href="#technologien">Technologien</a></li>
+            <li><a href="#dienstleistungen">Dienstleistungen</a></li>
+            <li><a href="#ansatz">Unser Ansatz</a></li>
+            <li><a href="#ueber-uns">Über uns</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="hero">
-            <h1>KI-Kraftwerk</h1>
-            <h2>Die Zukunft der lokalen KI ist hier.</h2>
-            <p>Entdecken Sie die nächste Generation der KI-Verarbeitung.</p>
-            <a href="technologien.html" class="cta-button">Mehr erfahren</a>
+        <section id="home" class="hero">
+            <h1>Das KI-Kraftwerk</h1>
+            <h2>Unglaublich sicher. Extrem leistungsstark.</h2>
+            <p>Ab 24.999 €</p>
+            <a href="#kontakt" class="cta-button">Jetzt beraten lassen</a>
         </section>
 
-        <section class="feature-section">
-            <h2>Revolutionäre Technologie</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <h3>196 GB VRAM</h3>
-                    <p>Leistung für anspruchsvollste KI-Modelle</p>
+        <section class="product-showcase">
+            <img src="images/placeholder-front.svg" alt="KI-Kraftwerk Frontansicht" class="product-image">
+            <img src="images/placeholder-perspective.svg" alt="KI-Kraftwerk Perspektive" class="product-image">
+        </section>
+
+        <section class="key-features">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h3>196 GB</h3>
+                    <p>VRAM für KI-Modelle</p>
                 </div>
-                <div class="feature-item">
-                    <h3>100% Offline</h3>
-                    <p>Absolute Datensicherheit durch lokale Verarbeitung</p>
+                <div class="spec-item">
+                    <h3>100%</h3>
+                    <p>Offline-Betrieb</p>
                 </div>
-                <div class="feature-item">
-                    <h3>Plug & Play</h3>
-                    <p>Sofort einsatzbereit mit vorinstallierter Software</p>
+                <div class="spec-item">
+                    <h3>24/7</h3>
+                    <p>Verfügbarkeit</p>
                 </div>
             </div>
         </section>
 
-        <section class="product-highlight">
-            <img src="images/placeholder-perspective.svg" alt="KI-Kraftwerk" class="product-image">
-            <div class="highlight-content">
-                <h2>Designed für Sicherheit</h2>
-                <p>Entwickelt für höchste behördliche Anforderungen.</p>
+        <section id="technologien" class="tech-section">
+            <h2>Modernste Technologie vereint</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h3>Lokale Sprachmodelle</h3>
+                    <p>Mistral, GPT-3.5 und weitere Modelle - komplett offline verfügbar.</p>
+                </div>
+                <div class="tech-item">
+                    <h3>Vektordatenbank</h3>
+                    <p>Blitzschnelle Ähnlichkeitssuche und semantische Analyse.</p>
+                </div>
+                <div class="tech-item">
+                    <h3>Knowledge Graphs</h3>
+                    <p>Komplexe Informationsstrukturen effizient visualisiert.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dienstleistungen" class="services-section">
+            <h2>Inklusive Dienstleistungen</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Installation & Setup</h3>
+                    <p>Professionelle Einrichtung vor Ort</p>
+                </div>
+                <div class="service-item">
+                    <h3>Schulung</h3>
+                    <p>Umfassende Einweisung Ihrer Mitarbeiter</p>
+                </div>
+                <div class="service-item">
+                    <h3>Support</h3>
+                    <p>24/7 technischer Support</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ansatz" class="approach-section">
+            <h2>Unser Ansatz: 100% Offline</h2>
+            <div class="approach-content">
+                <p>Das KI-Kraftwerk arbeitet vollständig offline - für maximale Sicherheit und Datenschutz. Ideal für behördliche und sicherheitskritische Anwendungen.</p>
+                <a href="#kontakt" class="cta-button">Jetzt beraten lassen</a>
+            </div>
+        </section>
+
+        <section id="kontakt" class="contact-section">
+            <h2>Kontakt</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Special Local Maschine UG</h3>
+                    <p>Bouchestraße 78</p>
+                    <p>12435 Berlin</p>
+                    <p>E-Mail: info@special-local-maschine.de</p>
+                </div>
+                <div class="contact-form">
+                    <!-- Kontaktformular wie gehabt -->
+                </div>
             </div>
         </section>
     </main>
@@ -57,206 +112,17 @@
     <footer>
         <p>&copy; 2024 Special Local Maschine UG. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script>
+        // Smooth Scrolling für die Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-<!-- dienstleistungen.html -->
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dienstleistungen - Special Local Maschine UG</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
-            <li><a href="ansatz.html">Unser Ansatz</a></li>
-            <li><a href="technologien.html">Technologien</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="services">
-            <h2>Unsere Dienstleistungen</h2>
-            <ul>
-                <li>
-                    <h3>Entwicklung lokaler, browserbasierter KI-Chat-Anwendungen</h3>
-                    <p>Wir entwickeln maßgeschneiderte KI-Chat-Anwendungen, die lokal in Ihrem Netzwerk laufen. Dies gewährleistet höchste Datensicherheit und Kontrolle über Ihre Informationen.</p>
-                </li>
-                <li>
-                    <h3>Serveroptimierung für Large Language Models (LLMs)</h3>
-                    <p>Unsere Experten optimieren Ihre Server-Infrastruktur, um die bestmögliche Leistung für den Einsatz von Large Language Models zu erzielen.</p>
-                </li>
-                <li>
-                    <h3>Installation und Evaluierung mehrerer LLMs</h3>
-                    <p>Wir installieren und evaluieren verschiedene LLMs, um die optimale Lösung für Ihre spezifischen Anforderungen zu finden.</p>
-                </li>
-                <li>
-                    <h3>Dokumenteninteraktion und Knowledge-Graph-Design</h3>
-                    <p>Wir entwickeln Lösungen, die es Ihren Mitarbeitern ermöglichen, effizient mit Dokumenten zu interagieren und komplexe Informationsstrukturen durch Knowledge Graphs zu visualisieren.</p>
-                </li>
-                <li>
-                    <h3>Maßgeschneiderte KI-Lösungen für behördliche und politische Anfragen</h3>
-                    <p>Unsere KI-Lösungen unterstützen Sie bei der schnellen und präzisen Beantwortung von behördlichen und politischen Anfragen.</p>
-                </li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Special Local Maschine UG. Alle Rechte vorbehalten.</p>
-    </footer>
-</body>
-</html>
-
-<!-- ansatz.html -->
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unser Ansatz - Special Local Maschine UG</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
-            <li><a href="ansatz.html">Unser Ansatz</a></li>
-            <li><a href="technologien.html">Technologien</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="approach">
-            <h2>Unser Ansatz</h2>
-            <ul>
-                <li>
-                    <h3>Fokus auf einen Kunden zur Zeit</h3>
-                    <p>Wir konzentrieren uns auf einen Kunden zur Zeit, um eine intensive und maßgeschneiderte Implementierung zu gewährleisten. Dies ermöglicht es uns, uns voll und ganz auf Ihre spezifischen Anforderungen und Herausforderungen zu konzentrieren.</p>
-                </li>
-                <li>
-                    <h3>Lokale Implementierung für höchste Sicherheit</h3>
-                    <p>Alle unsere Lösungen werden lokal in Ihrem Netzwerk implementiert. Dies gewährleistet die höchstmögliche Kontrolle über Ihre Daten und minimiert Sicherheitsrisiken.</p>
-                </li>
-                <li>
-                    <h3>Einhaltung behördlicher Sicherheitsstandards</h3>
-                    <p>Wir legen großen Wert darauf, bei allen unseren Projekten die strengsten behördlichen Sicherheitsstandards einzuhalten. Dies macht uns zum idealen Partner für Regierungsbehörden und sicherheitskritische Organisationen.</p>
-                </li>
-                <li>
-                    <h3>Einsatz leistungsstarker, energieeffizienter Maschinen</h3>
-                    <p>Für Tests und Entwicklung setzen wir auf leistungsstarke, aber energieeffiziente Maschinen. Dies ermöglicht uns, innovative Lösungen zu entwickeln und gleichzeitig nachhaltig zu arbeiten.</p>
-                </li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Special Local Maschine UG. Alle Rechte vorbehalten.</p>
-    </footer>
-</body>
-</html>
-
-<!-- technologien.html -->
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technologien - Special Local Maschine UG</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
-            <li><a href="ansatz.html">Unser Ansatz</a></li>
-            <li><a href="technologien.html">Technologien</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="technologies">
-            <h2>Unsere Technologien</h2>
-            <ul>
-                <li>
-                    <h3>Ollama</h3>
-                    <p>Wir nutzen Ollama zur effizienten Verwaltung und Nutzung von Sprachmodellen und APIs. Dies ermöglicht uns, flexibel auf verschiedene KI-Modelle zuzugreifen und sie optimal in Ihre Lösungen zu integrieren.</p>
-                </li>
-                <li>
-                    <h3>Open Web UI</h3>
-                    <p>Mit Open Web UI bauen wir benutzerfreundliche Oberflächen und ermöglichen intuitive Modellinteraktionen. Dies gewährleistet, dass Ihre Mitarbeiter effizient mit den KI-Systemen arbeiten können.</p>
-                </li>
-                <li>
-                    <h3>Langchain</h3>
-                    <p>Langchain setzen wir für die Entwicklung und Verwaltung komplexer Konversationslogik ein. Dies ermöglicht natürliche und kontextbezogene Interaktionen mit den KI-Systemen.</p>
-                </li>
-                <li>
-                    <h3>Neo4js</h3>
-                    <p>Zur Erstellung und Implementierung von Knowledge Graphs verwenden wir Neo4js. Diese Technologie hilft uns, komplexe Informationsstrukturen zu visualisieren und zu verwalten.</p>
-                </li>
-                <li>
-                    <h3>MLX und Core ML</h3>
-                    <p>Für effizientes Modellmanagement und fortschrittliche Machine-Learning-Komponenten setzen wir auf MLX und Core ML. Diese Tools ermöglichen es uns, leistungsstarke und effiziente KI-Lösungen zu entwickeln.</p>
-                </li>
-                <li>
-                    <h3>Integration verschiedener KI-Modelle</h3>
-                    <p>Wir arbeiten mit einer Vielzahl von KI-Modellen, darunter Mistral 7B, GPT-3.5 und BERT. Dies ermöglicht es uns, für jede Aufgabe das am besten geeignete Modell einzusetzen.</p>
-                </li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Special Local Maschine UG. Alle Rechte vorbehalten.</p>
-    </footer>
-</body>
-</html>
-
-<!-- ueber-uns.html -->
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über uns - Special Local Maschine UG</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
-            <li><a href="ansatz.html">Unser Ansatz</a></li>
-            <li><a href="technologien.html">Technologien</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="about">
-            <h2>Über Special Local Maschine UG</h2>
-            <p>Special Local Maschine UG ist ein innovatives Technologieunternehmen mit Sitz im Herzen Berlins. Wir sind ein Team erfahrener KI-Spezialisten, die sich der Bereitstellung sicherer, effizienter und maßgeschneiderter KI-Lösungen verschrieben haben.</p>
-            <p>Unser Fokus liegt auf der Entwicklung lokaler KI-Anwendungen, die höchsten Sicherheitsstandards entsprechen. Wir verstehen die einzigartigen Herausforderungen, denen sich Behörden und sicherheitskritische Organisationen gegenübersehen, und haben unseren Ansatz speziell darauf ausgerichtet, diesen Anforderungen gerecht zu werden.</p>
-            <p>Was uns auszeichnet:</p>
-            <ul>
-                <li>Expertise in KI und Machine Learning</li>
-                <li>Fokus auf Datensicherheit und Privatsphäre</li>
-                <li>Maßgeschneiderte Lösungen für jeden Kunden</li>
-                <li>Einhaltung behördlicher Sicherheitsstandards</li>
-                <li>Nachhaltiger Ansatz durch den Einsatz energieeffizienter Technologien</li>
-            </ul>
-            <p>Bei Special Local Maschine UG glauben wir daran, dass KI-Technologie sicher, effizient und verantwortungsvoll eingesetzt werden kann, um die Arbeit von Behörden und Organisationen zu unterstützen und zu verbessern. Wir sind stolz darauf, einen Beitrag zur digitalen Transformation in Deutschland zu leisten und dabei höchste Standards in

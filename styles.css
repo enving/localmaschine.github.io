@@ -318,4 +318,28 @@ footer {
     .support-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Padding für fixierte Navigation */
+body {
+    scroll-padding-top: 80px; /* Höhe der Navigation */
+}
+
+/* Aktive Navigation Styles */
+nav a.active {
+    color: var(--secondary-color);
+}
+
+/* Sektions-Abstände */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 20px;
 } 
