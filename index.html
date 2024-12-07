@@ -3,39 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ihre Webseite</title>
+    <title>Special Local Maschine - AIaaS für den deutschen Mittelstand</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <a href="#">Ihr Logo</a>
-                </div>
-                <div class="nav-links">
-                    <a href="#use-cases">Anwendungsfälle</a>
-                    <a href="#special-local-machine">Special Local Machine</a>
-                    <a href="#advantages">Vorteile</a>
-                    <a href="#application-examples">Anwendungsbeispiele</a>
-                    <a href="#pricing">Preise</a>
-                    <a href="#demo">Demo</a>
-                    <a href="#contact">Kontakt</a>
-                    <a href="#webinar-access">Webinarzugang</a>
+        <h1>Willkommen auf unserer Seite</h1>
+    </header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/">Special Local Maschine</a>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#benefits">Vorteile</a>
+                <a href="#use-cases">Anwendungen</a>
+                <a href="#pricing">Preise</a>
+                <a href="https://docs.special-local-maschine.de" target="_blank">Dokumentation</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="/demo" class="btn btn-outline">Demo</a>
+                <a href="/contact" class="btn btn-primary">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>KI-Infrastruktur als Service</h1>
+                <h2>Für den deutschen Mittelstand</h2>
+                <p class="hero-subtitle">
+                    Implementieren Sie KI-Lösungen ohne eigene MLOps oder Server-Expertise. 
+                    Wir kümmern uns um die komplette Infrastruktur.
+                </p>
+                <div class="hero-buttons">
+                    <a href="/demo" class="btn btn-primary">Kostenlose Demo</a>
+                    <a href="#how-it-works" class="btn btn-outline">Wie es funktioniert</a>
                 </div>
             </div>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="hero" class="hero">
-            <div class="hero-content">
-                <h1>Willkommen auf unserer Seite</h1>
-                <h2>Entdecken Sie unsere Lösungen</h2>
-                <p class="hero-subtitle">Innovative Technologien für Ihr Unternehmen</p>
-                <div class="hero-buttons">
-                    <a href="#demo" class="btn btn-primary">Demo anfordern</a>
-                    <a href="#contact" class="btn btn-outline">Kontaktieren Sie uns</a>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Ihre eigene KI-Infrastruktur</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Dedizierte Server</h3>
+                    <p>Ihre KI-Modelle laufen auf eigener Hardware - keine shared resources</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Sofort einsatzbereit</h3>
+                    <p>Vorinstallierte und optimierte KI-Modelle für Ihren Anwendungsfall</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>Vollständig verwaltet</h3>
+                    <p>Wir kümmern uns um Updates, Wartung und Optimierung</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>DSGVO-konform</h3>
+                    <p>Hosting in deutschen Rechenzentren, ISO-27001 zertifiziert</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <h2>So einfach geht's</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Beratungsgespräch</h3>
+                    <p>Wir analysieren Ihre Anforderungen und empfehlen die passende Lösung</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Setup</h3>
+                    <p>Wir richten Ihre dedizierte KI-Infrastruktur ein und optimieren sie</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Integration</h3>
+                    <p>Anbindung an Ihre bestehenden Systeme über REST API oder SDK</p>
                 </div>
             </div>
         </section>
@@ -44,10 +96,33 @@
             <h2>Anwendungsfälle</h2>
             <div class="use-case-grid">
                 <div class="use-case-card">
+                    <h3>Dokumentenanalyse</h3>
+                    <p>Automatische Verarbeitung von Verträgen, Rechnungen und Dokumenten</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Kundenservice</h3>
+                    <p>24/7 KI-gestützter Support für Ihre Kunden</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Prozessautomatisierung</h3>
+                    <p>Intelligente Workflows für repetitive Aufgaben</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Behördliche Expertise</h3>
+                    <p>Maßgeschneiderte KI-Lösungen für behördliche und politische Anfragen</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>KI-Chat-Anwendungen</h3>
+                    <p>Entwicklung lokaler Chat-Systeme für höchste Datensicherheit</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>LLM-Optimierung</h3>
+                    <p>Serveroptimierung für Large Language Models mit maximaler Effizienz</p>
+                </div>
+                <div class="use-case-card">
                     <h3>Qwen 2.5 32B Integration</h3>
                     <p>Effiziente Unterstützung für Coding-Projekte, integrierbar in Microsoft Visual Code und andere IDEs.</p>
                 </div>
-                <!-- Weitere Use Case Karten hier -->
             </div>
         </section>
 
@@ -55,58 +130,120 @@
             <h2>Special Local Machine</h2>
             <p>Informationen über unsere spezielle lokale Maschine und ihre Vorteile.</p>
         </section>
-
+        
         <section id="advantages" class="section">
             <h2>Vorteile</h2>
             <p>Hier sind die Vorteile unserer Lösungen aufgeführt.</p>
         </section>
-
+        
         <section id="application-examples" class="section">
             <h2>Anwendungsbeispiele</h2>
             <p>Beispiele, wie unsere Lösungen in der Praxis eingesetzt werden.</p>
         </section>
-
+        
         <section id="pricing" class="section">
             <h2>Preise</h2>
             <p>Informationen zu unseren Preisplänen und Angeboten.</p>
         </section>
-
+        
         <section id="demo" class="section">
             <h2>Demo</h2>
             <p>Fordern Sie eine Demo an, um unsere Lösungen in Aktion zu sehen.</p>
         </section>
-
+        
         <section id="contact" class="section">
             <h2>Kontakt</h2>
             <p>Kontaktieren Sie uns für weitere Informationen oder Anfragen.</p>
         </section>
-
+        
         <section id="webinar-access" class="section">
             <h2>Webinarzugang</h2>
             <p>Erhalten Sie Zugang zu unseren Webinaren und Schulungen.</p>
+        </section>
+
+        <section class="technology">
+            <h2>Unsere Technologie-Basis</h2>
+            <div class="tech-highlights">
+                <div class="tech-card">
+                    <h3>Leistungsstarke Hardware</h3>
+                    <ul>
+                        <li>Skalierfähige Infrastruktur für Einbindung komplexer Sprachmodelle</li>
+                        <li>100% Dedizierter Server in Deutschland und nur für Sie von unseren Partnern</li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>Moderne KI-Stack</h3>
+                    <ul>
+                        <li>Ollama für effiziente Modellverwaltung</li>
+                        <li>Langchain für komplexe Konversationslogik</li>
+                        <li>Neo4j für leistungsstarke Knowledge Graphs</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>Unterstützte Modelle</h3>
+                    <ul>
+                        <li>Mistral 7B & 8x7B</li>
+                        <li>Llama 2 (7B bis 70B)</li>
+                        <li>GPT-3.5 & GPT-4</li>
+                        <li>Claude 2 & 3</li>
+                        <li>CodeLlama (7B bis 34B)</li>
+                        <li>BERT & RoBERTa</li>
+                        <li>Stable Diffusion XL</li>
+                        <li>Whisper für Spracherkennung</li>
+                        <li>Falcon (7B bis 180B)</li>
+                        <li>Yi (6B bis 34B)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="integrations">
+            <h2>Nahtlose Integration</h2>
+            <p>Über 200 vorgefertigte Integrationen für Ihre bestehenden Systeme</p>
+            <div class="integration-highlights">
+                <div class="integration-category">
+                    <h3>Populäre Dienste</h3>
+                    <p>Google Workspace, Slack, Microsoft Teams, Telegram, WhatsApp, Notion</p>
+                </div>
+                <div class="integration-category">
+                    <h3>Datenbanken</h3>
+                    <p>MySQL, PostgreSQL, MongoDB, Nextcloud</p>
+                </div>
+                <div class="integration-category">
+                    <h3>Kollaboration</h3>
+                    <p>Confluence, Discord, WooCommerce, Twilio</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Starten Sie jetzt mit AIaaS</h2>
+            <p>Vereinbaren Sie ein kostenloses Beratungsgespräch</p>
+            <a href="/contact" class="btn btn-primary">Kontakt aufnehmen</a>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Über uns</h4>
-                <a href="#about">Unternehmensinformationen</a>
-                <a href="#team">Unser Team</a>
+                <h4>Special Local Maschine</h4>
+                <p>KI-Infrastruktur für den deutschen Mittelstand</p>
             </div>
             <div class="footer-section">
-                <h4>Hilfe</h4>
-                <a href="#faq">Häufige Fragen</a>
-                <a href="#support">Kundensupport</a>
+                <h4>Links</h4>
+                <a href="/privacy">Datenschutz</a>
+                <a href="/imprint">Impressum</a>
+                <a href="/terms">AGB</a>
             </div>
             <div class="footer-section">
-                <h4>Rechtliches</h4>
-                <a href="#privacy">Datenschutz</a>
-                <a href="#terms">Nutzungsbedingungen</a>
+                <h4>Kontakt</h4>
+                <p>info@special-local-maschine.de</p>
+                <p>+49 30 123456789</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 Ihr Unternehmen</p>
+            <p>&copy; 2024 Special Local Maschine UG. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 </body>
