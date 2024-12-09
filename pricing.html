@@ -30,17 +30,11 @@
         <div class="pricing-container">
             <header class="pricing-header">
                 <h1>Preise</h1>
-                <div class="trusted-by">
-                    <p>Vertraut von</p>
-                    <div class="logo-grid">
-                        <!-- Logos hier einfügen -->
-                    </div>
-                </div>
             </header>
 
             <div class="pricing-toggle">
-                <button class="toggle-btn active">Monatlich</button>
-                <button class="toggle-btn">Jährlich (20% Ersparnis)</button>
+                <button class="toggle-btn active" data-period="monthly">Monatlich</button>
+                <button class="toggle-btn" data-period="yearly">Jährlich (20% Ersparnis)</button>
             </div>
 
             <div class="pricing-grid">
@@ -49,7 +43,7 @@
                     <h3>Basis</h3>
                     <p class="plan-description">Perfekt für den Einstieg in KI-Lösungen</p>
                     <div class="price">
-                        <span class="amount">€499</span>
+                        <span class="amount" data-monthly="499" data-yearly="399">€499</span>
                         <span class="period">/Monat</span>
                     </div>
                     <div class="plan-features">
@@ -77,7 +71,7 @@
                     <h3>Business</h3>
                     <p class="plan-description">Optimal für mittelständische Unternehmen</p>
                     <div class="price">
-                        <span class="amount">€999</span>
+                        <span class="amount" data-monthly="999" data-yearly="799">€999</span>
                         <span class="period">/Monat</span>
                     </div>
                     <div class="plan-features">
@@ -106,7 +100,7 @@
                     <h3>Enterprise</h3>
                     <p class="plan-description">Maßgeschneidert für Großunternehmen</p>
                     <div class="price">
-                        <span class="amount">Individuell</span>
+                        <span class="amount" data-monthly="Individuell" data-yearly="Individuell">Individuell</span>
                     </div>
                     <div class="plan-features">
                         <div class="feature">Unbegrenzte Server</div>
@@ -152,13 +146,43 @@
     </footer>
 
     <script>
-        // Pricing toggle functionality
         document.addEventListener('DOMContentLoaded', function() {
             const toggleBtns = document.querySelectorAll('.toggle-btn');
+            const amounts = document.querySelectorAll('.amount');
+            const periods = document.querySelectorAll('.period');
+
+            function updatePrices(period) {
+                amounts.forEach(amount => {
+                    // Überspringen wenn "Individuell"
+                    if (!amount.dataset.monthly) return;
+
+                    const monthlyPrice = parseInt(amount.dataset.monthly);
+                    const yearlyPrice = parseInt(amount.dataset.yearly);
+                    
+                    if (period === 'yearly') {
+                        amount.textContent = `€${yearlyPrice}`;
+                    } else {
+                        amount.textContent = `€${monthlyPrice}`;
+                    }
+                });
+
+                // Update period text
+                periods.forEach(period => {
+                    if (period === 'yearly') {
+                        period.textContent = '/Monat (Jährlich)';
+                    } else {
+                        period.textContent = '/Monat';
+                    }
+                });
+            }
+
             toggleBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
                     toggleBtns.forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
+                    
+                    const period = this.dataset.period;
+                    updatePrices(period);
                 });
             });
         });

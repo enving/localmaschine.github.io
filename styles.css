@@ -326,6 +326,11 @@ footer {
     border: 1px solid var(--border-color);
     border-radius: 1rem;
     background: white;
+    transition: border-color 0.3s;
+}
+
+.pricing-card:hover {
+    border-color: var(--primary-color);
 }
 
 .pricing-card.featured {
