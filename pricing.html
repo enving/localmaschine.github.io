@@ -1,73 +1,167 @@
-<div class="pricing-container">
-    <header class="pricing-header">
-        <h1>Pricing</h1>
-        <div class="trusted-by">
-            <p>Trusted by</p>
-            <div class="logo-grid">
-                <!-- Logos hier einfügen -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preise - KIjetzt!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">KIjetzt!</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#benefits">Vorteile</a>
+                <a href="index.html#use-cases">Anwendungen</a>
+                <a href="pricing.html">Preise</a>
+                <a href="https://docs.special-local-maschine.de" target="_blank">Dokumentation</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="demo.html" class="btn btn-outline">Demo</a>
+                <a href="contact.html" class="btn btn-primary">Kontakt</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <div class="pricing-toggle">
-        <button class="toggle-btn active">monthly</button>
-        <button class="toggle-btn">annual (20% saving)</button>
-    </div>
-
-    <div class="pricing-grid">
-        <!-- Starter Plan -->
-        <div class="pricing-card">
-            <h3>Starter</h3>
-            <p class="plan-description">Perfect for getting started and seeing the power of n8n</p>
-            <div class="price">
-                <span class="amount">€20</span>
-                <span class="period">/month</span>
-            </div>
-            <div class="plan-features">
-                <div class="feature">
-                    <strong>2.5k</strong> workflow executions
+    <main>
+        <div class="pricing-container">
+            <header class="pricing-header">
+                <h1>Preise</h1>
+                <div class="trusted-by">
+                    <p>Vertraut von</p>
+                    <div class="logo-grid">
+                        <!-- Logos hier einfügen -->
+                    </div>
                 </div>
-                <div class="feature">
-                    <strong>5</strong> active workflows
+            </header>
+
+            <div class="pricing-toggle">
+                <button class="toggle-btn active">Monatlich</button>
+                <button class="toggle-btn">Jährlich (20% Ersparnis)</button>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Basis Plan -->
+                <div class="pricing-card">
+                    <h3>Basis</h3>
+                    <p class="plan-description">Perfekt für den Einstieg in KI-Lösungen</p>
+                    <div class="price">
+                        <span class="amount">€499</span>
+                        <span class="period">/Monat</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature">
+                            <strong>1</strong> dedizierter Server
+                        </div>
+                        <div class="feature">
+                            <strong>Bis zu 10</strong> Benutzer
+                        </div>
+                        <div class="feature">5 KI-Modelle inklusive</div>
+                    </div>
+                    <div class="includes">
+                        <h4>Enthält:</h4>
+                        <ul>
+                            <li>Hosting in Deutschland</li>
+                            <li>Email Support</li>
+                            <li>Grundlegende Integrationen</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary">Demo anfragen</button>
                 </div>
-                <div class="feature">Hosted by n8n</div>
+
+                <!-- Business Plan -->
+                <div class="pricing-card featured">
+                    <h3>Business</h3>
+                    <p class="plan-description">Optimal für mittelständische Unternehmen</p>
+                    <div class="price">
+                        <span class="amount">€999</span>
+                        <span class="period">/Monat</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature">
+                            <strong>2</strong> dedizierte Server
+                        </div>
+                        <div class="feature">
+                            <strong>Bis zu 50</strong> Benutzer
+                        </div>
+                        <div class="feature">Alle KI-Modelle inklusive</div>
+                    </div>
+                    <div class="includes">
+                        <h4>Enthält:</h4>
+                        <ul>
+                            <li>Hosting in Deutschland</li>
+                            <li>Premium Support</li>
+                            <li>Erweiterte Integrationen</li>
+                            <li>Active Directory Anbindung</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary">Jetzt beraten lassen</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="plan-description">Maßgeschneidert für Großunternehmen</p>
+                    <div class="price">
+                        <span class="amount">Individuell</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature">Unbegrenzte Server</div>
+                        <div class="feature">Unbegrenzte Benutzer</div>
+                        <div class="feature">Individuelle KI-Modelle</div>
+                    </div>
+                    <div class="includes">
+                        <h4>Enthält:</h4>
+                        <ul>
+                            <li>Dedizierte Infrastruktur</li>
+                            <li>24/7 Support</li>
+                            <li>Maßgeschneiderte Integrationen</li>
+                            <li>Service Level Agreement</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary">Kontakt aufnehmen</button>
+                </div>
             </div>
-            <div class="includes">
-                <h4>Includes:</h4>
-                <ul>
-                    <li>1 shared project</li>
-                    <li>Unlimited users</li>
-                    <li>Forum support</li>
-                </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>KIjetzt!</h4>
+                <p>KI-Infrastruktur für den deutschen Mittelstand</p>
             </div>
-            <button class="btn-primary">Start free trial</button>
+            <div class="footer-section">
+                <h4>Links</h4>
+                <a href="privacy.html">Datenschutz</a>
+                <a href="imprint.html">Impressum</a>
+                <a href="terms.html">AGB</a>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>info@special-local-maschine.de</p>
+                <p>+49 30 123456789</p>
+            </div>
         </div>
+        <div class="footer-bottom">
+            <p>© 2024 KIjetzt!. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
 
-        <!-- Pro Plan -->
-        <div class="pricing-card featured">
-            <h3>Pro</h3>
-            <p class="plan-description">Optimal for a team collaborating to run more workflows</p>
-            <!-- Ähnliche Struktur wie Starter -->
-        </div>
-
-        <!-- Enterprise Plan -->
-        <div class="pricing-card">
-            <h3>Enterprise</h3>
-            <p class="plan-description">Ideal for businesses with strict security and performance requirements</p>
-            <!-- Ähnliche Struktur wie Starter -->
-        </div>
-    </div>
-
-    <div class="additional-options">
-        <div class="community-edition">
-            <h3>Community Edition</h3>
-            <p>A basic version of n8n is available on GitHub</p>
-            <a href="#" class="btn-outline">View docs</a>
-        </div>
-        <div class="startup-plan">
-            <h3>Startup Plan</h3>
-            <p>For startups with up to 20 employees that raised up to $5M</p>
-            <a href="#" class="btn-outline">Learn more</a>
-        </div>
-    </div>
-</div>
+    <script>
+        // Pricing toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtns = document.querySelectorAll('.toggle-btn');
+            toggleBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    toggleBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
