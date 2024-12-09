@@ -7,16 +7,28 @@
     <link rel="stylesheet" href="styles.css"> <!-- Beispiel für CSS -->
 </head>
 <body>
-    <header>
-        <h1>Bestellung</h1>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#">Ihr Logo</a>
+            </div>
+            <div class="nav-links">
+                <!-- Navigation Links hier -->
+            </div>
+        </div>
     </header>
     <main>
-        <section>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bestellung</h1>
+            </div>
+        </section>
+        <section class="section">
             <h2>Monatliche Kosten</h2>
             <p>Die monatlichen Kosten werden per Lastschriftverfahren nach SEPA eingezogen.</p>
             <p>Einmalige Einrichtungskosten: <strong>10.000 €</strong></p>
         </section>
-        <section>
+        <section class="section">
             <h2>Bestellformular</h2>
             <form action="zahlung.php" method="post">
                 <label for="name">Name:</label>
@@ -28,7 +40,7 @@
                 <label for="betrag">Betrag:</label>
                 <input type="text" id="betrag" name="betrag" value="10.000 €" readonly>
                 
-                <button type="submit">Jetzt bestellen</button>
+                <button class="btn btn-primary" type="submit">Jetzt bestellen</button>
             </form>
         </section>
     </main>
