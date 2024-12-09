@@ -51,6 +51,10 @@
                             <option value="large">Groß (51-250 Mitarbeiter)</option>
                         </select>
                     </div>
+                    <div class="nonprofit-checkbox">
+                        <input type="checkbox" id="nonprofit-basis" class="nonprofit-check">
+                        <label for="nonprofit-basis">Gemeinnützige Organisation (-20%)</label>
+                    </div>
                     <div class="plan-features">
                         <div class="feature">
                             <strong>1</strong> dedizierter Server
@@ -87,6 +91,10 @@
                             <option value="large">Groß (51-250 Mitarbeiter)</option>
                         </select>
                     </div>
+                    <div class="nonprofit-checkbox">
+                        <input type="checkbox" id="nonprofit-business" class="nonprofit-check">
+                        <label for="nonprofit-business">Gemeinnützige Organisation (-20%)</label>
+                    </div>
                     <div class="plan-features">
                         <div class="feature">
                             <strong>2</strong> dedizierte Server
@@ -122,6 +130,10 @@
                             <option value="medium">Mittel (11-50 Mitarbeiter)</option>
                             <option value="large">Groß (51-250 Mitarbeiter)</option>
                         </select>
+                    </div>
+                    <div class="nonprofit-checkbox">
+                        <input type="checkbox" id="nonprofit-enterprise" class="nonprofit-check">
+                        <label for="nonprofit-enterprise">Gemeinnützige Organisation (-20%)</label>
                     </div>
                     <div class="plan-features">
                         <div class="feature">Unbegrenzte Server</div>
@@ -172,27 +184,52 @@
             const amounts = document.querySelectorAll('.amount');
             const periods = document.querySelectorAll('.period');
             const companySizeSelects = document.querySelectorAll('.company-size-select');
+            const nonprofitChecks = document.querySelectorAll('.nonprofit-check');
+
+            function calculatePrice(basePrice, companySize, isNonprofit) {
+                let price = basePrice;
+                
+                // Unternehmensgröße-Multiplikatoren
+                if (companySize === 'medium') {
+                    price *= 1.2;
+                } else if (companySize === 'large') {
+                    price *= 1.5;
+                }
+                
+                // Gemeinnützigkeits-Rabatt
+                if (isNonprofit) {
+                    price *= 0.8; // 20% Rabatt
+                }
+                
+                return Math.round(price);
+            }
 
             function updatePrices(period) {
                 amounts.forEach(amount => {
                     if (!amount.dataset.monthly) return;
 
+                    const card = amount.closest('.pricing-card');
+                    const companySize = card.querySelector('.company-size-select').value;
+                    const isNonprofit = card.querySelector('.nonprofit-check').checked;
+                    
                     let monthlyPrice = parseInt(amount.dataset.monthly);
                     let yearlyPrice = parseInt(amount.dataset.yearly);
 
-                    const companySize = amount.closest('.pricing-card').querySelector('.company-size-select').value;
-                    if (companySize === 'medium') {
-                        monthlyPrice *= 1.2;
-                        yearlyPrice *= 1.2;
-                    } else if (companySize === 'large') {
-                        monthlyPrice *= 1.5;
-                        yearlyPrice *= 1.5;
-                    }
+                    const finalMonthlyPrice = calculatePrice(monthlyPrice, companySize, isNonprofit);
+                    const finalYearlyPrice = calculatePrice(yearlyPrice, companySize, isNonprofit);
 
                     if (period === 'yearly') {
-                        amount.textContent = `€${yearlyPrice}`;
+                        if (isNonprofit) {
+                            amount.innerHTML = `<span class="original-price">€${yearlyPrice}</span>€${finalYearlyPrice}<span class="nonprofit-badge">-20%</span>`;
+                        } else {
+                            amount.textContent = `€${finalYearlyPrice}`;
+                        }
                     } else {
-                        amount.textContent = `€${monthlyPrice}`;
+                        if (isNonprofit) {
+                            amount.innerHTML = `<span class="original-price">€${monthlyPrice}</span>€${finalMonthlyPrice}<span class="nonprofit-badge">-20%</span>`;
+                        } else {
+                            amount.textContent = `€${finalMonthlyPrice}`;
+                        }
                     }
                 });
 
@@ -217,6 +254,14 @@
 
             companySizeSelects.forEach(select => {
                 select.addEventListener('change', function() {
+                    const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
+                    updatePrices(activePeriod);
+                });
+            });
+
+            // Event Listener für Nonprofit Checkbox
+            nonprofitChecks.forEach(check => {
+                check.addEventListener('change', function() {
                     const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
                     updatePrices(activePeriod);
                 });
