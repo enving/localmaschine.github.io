@@ -43,6 +43,14 @@
                         <span class="amount" data-monthly="1000" data-yearly="800">€1.000</span>
                         <span class="period">/Monat</span>
                     </div>
+                    <div class="company-size">
+                        <label for="company-size-basis">Unternehmensgröße:</label>
+                        <select id="company-size-basis" class="company-size-select">
+                            <option value="small">Klein (1-10 Mitarbeiter)</option>
+                            <option value="medium">Mittel (11-50 Mitarbeiter)</option>
+                            <option value="large">Groß (51-250 Mitarbeiter)</option>
+                        </select>
+                    </div>
                     <div class="plan-features">
                         <div class="feature">
                             <strong>1</strong> dedizierter Server
@@ -71,6 +79,14 @@
                         <span class="amount" data-monthly="3000" data-yearly="2400">€3.000</span>
                         <span class="period">/Monat</span>
                     </div>
+                    <div class="company-size">
+                        <label for="company-size-business">Unternehmensgröße:</label>
+                        <select id="company-size-business" class="company-size-select">
+                            <option value="small">Klein (1-10 Mitarbeiter)</option>
+                            <option value="medium">Mittel (11-50 Mitarbeiter)</option>
+                            <option value="large">Groß (51-250 Mitarbeiter)</option>
+                        </select>
+                    </div>
                     <div class="plan-features">
                         <div class="feature">
                             <strong>2</strong> dedizierte Server
@@ -98,6 +114,14 @@
                     <p class="plan-description">Maßgeschneidert für Großunternehmen</p>
                     <div class="price">
                         <span class="amount" data-monthly="Individuell" data-yearly="Individuell">Individuell</span>
+                    </div>
+                    <div class="company-size">
+                        <label for="company-size-enterprise">Unternehmensgröße:</label>
+                        <select id="company-size-enterprise" class="company-size-select">
+                            <option value="small">Klein (1-10 Mitarbeiter)</option>
+                            <option value="medium">Mittel (11-50 Mitarbeiter)</option>
+                            <option value="large">Groß (51-250 Mitarbeiter)</option>
+                        </select>
                     </div>
                     <div class="plan-features">
                         <div class="feature">Unbegrenzte Server</div>
@@ -147,15 +171,24 @@
             const toggleBtns = document.querySelectorAll('.toggle-btn');
             const amounts = document.querySelectorAll('.amount');
             const periods = document.querySelectorAll('.period');
+            const companySizeSelects = document.querySelectorAll('.company-size-select');
 
             function updatePrices(period) {
                 amounts.forEach(amount => {
-                    // Überspringen wenn "Individuell"
                     if (!amount.dataset.monthly) return;
 
-                    const monthlyPrice = parseInt(amount.dataset.monthly);
-                    const yearlyPrice = parseInt(amount.dataset.yearly);
-                    
+                    let monthlyPrice = parseInt(amount.dataset.monthly);
+                    let yearlyPrice = parseInt(amount.dataset.yearly);
+
+                    const companySize = amount.closest('.pricing-card').querySelector('.company-size-select').value;
+                    if (companySize === 'medium') {
+                        monthlyPrice *= 1.2;
+                        yearlyPrice *= 1.2;
+                    } else if (companySize === 'large') {
+                        monthlyPrice *= 1.5;
+                        yearlyPrice *= 1.5;
+                    }
+
                     if (period === 'yearly') {
                         amount.textContent = `€${yearlyPrice}`;
                     } else {
@@ -163,7 +196,6 @@
                     }
                 });
 
-                // Update period text
                 periods.forEach(period => {
                     if (period === 'yearly') {
                         period.textContent = '/Monat (Jährlich)';
@@ -180,6 +212,13 @@
                     
                     const period = this.dataset.period;
                     updatePrices(period);
+                });
+            });
+
+            companySizeSelects.forEach(select => {
+                select.addEventListener('change', function() {
+                    const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
+                    updatePrices(activePeriod);
                 });
             });
         });
